@@ -3,10 +3,13 @@
 @import "foundation.scss";
 $mainTextColor: #463629;
 $seconderyTextColor: #000000;
-$seconderyColor1: #003768;
-$seconderyColor2: #e5c100;
+$seconderyColor1: #195171;
+$seconderyColor2: #20A1CC;
+$seconderyColor3: #9D2727;
+$seconderyColor4: #0C666F;
+$seconderyColor5: #364449;
 $backgroundColor: #F8ECC2;
-$numberColor: #3BA091;
+$numberColor: #2F8877;
 body
 {
 	margin: 0px;
@@ -15,6 +18,16 @@ body
 .row.fullWidth
 {
 	max-width: 100% !important;
+}
+.paddingless
+{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.marginless
+{
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 #mainPlate
 {
@@ -27,8 +40,8 @@ body
 	.listPlate
 	{
 		background-color: $backgroundColor;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		p
 		{
 			direction: rtl;
@@ -55,6 +68,57 @@ body
 			font-size: 0.8rem;
 			font-family: IRANSans;
 			color: $seconderyTextColor;
+		}
+	}
+	.detailPlate
+	{
+		h2.title
+		{
+			color:#ffffff;
+			font-size: 2rem;
+			margin-top: 0px;
+			margin-bottom: 2rem;
+			padding-top: 1.4rem;
+			font-family: IRANSans;
+			font-weight: 400;
+			text-align: right;
+			direction: rtl;
+			padding-right: 1.4rem;
+		}
+		p.text
+		{
+			color:#ffffff;
+			font-size: 1.1rem;
+			font-family: IRANSans;
+			font-weight: 300;
+			text-align: right;
+			direction: rtl;
+			padding-right: 2.5rem;
+		}
+		div.bx
+		{
+			height: 400px;
+			width: 100%;
+		}
+		div.tafsirBox
+		{
+			background-color: $seconderyColor1;
+		}
+		div.sarfBox
+		{
+			background-color: $seconderyColor2;
+		}
+		div.hadisBox
+		{
+			background-color: $seconderyColor4;
+		}
+		div.moreDetailBox
+		{
+			background-color: $seconderyColor5;
+		}
+		div.extraDetailBox
+		{
+			background-color: $seconderyColor3;
 		}
 	}
 
