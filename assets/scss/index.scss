@@ -1,0 +1,61 @@
+@import "fontello";
+@import "fonts";
+@import "foundation.scss";
+$mainTextColor: #463629;
+$seconderyTextColor: #000000;
+$seconderyColor1: #003768;
+$seconderyColor2: #e5c100;
+$backgroundColor: #F8ECC2;
+$numberColor: #3BA091;
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.row.fullWidth
+{
+	max-width: 100% !important;
+}
+#mainPlate
+{
+	height:100vh;
+	.listPlate,.detailPlate
+	{
+		height:100vh;
+		overflow-y: auto;
+	}
+	.listPlate
+	{
+		background-color: $backgroundColor;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		p
+		{
+			direction: rtl;
+			text-align: right;
+		}
+		p.aye
+		{
+			font-size: 1.6rem;
+			font-family: meQuran;
+			color: $mainTextColor;
+			margin-bottom: 0px;
+			word-spacing: 0.6rem;
+			span.number
+			{
+				font-family: fontello;
+				font-size: 1.4rem;
+				padding-right: 0.4rem;
+				margin-top: 0.2rem;
+				color: $numberColor;
+			}
+		}
+		p.translate
+		{
+			font-size: 0.8rem;
+			font-family: IRANSans;
+			color: $seconderyTextColor;
+		}
+	}
+
+}

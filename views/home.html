@@ -1,0 +1,13 @@
+<div id="mainPlate" class="row fullWidth">
+	<div class="column large-5 listPlate">
+		<div class="bx" ng-repeat="itm in soore.items track by $index">
+			<p class="aye">
+			{{itm}}<span class="number">{{numbers[$index]}}</span>
+			</p>
+			<p class="translate">
+			{{translates[0][$index]}}
+			</p>
+		</div>
+	</div>
+	<div class="column large-7 detailPlate"></div>
+</div>
