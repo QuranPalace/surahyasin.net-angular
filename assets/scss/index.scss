@@ -84,20 +84,26 @@ body
 			text-align: right;
 			direction: rtl;
 			padding-right: 1.4rem;
+			padding-left: 1.4rem;
 		}
 		p.text
 		{
 			color:#ffffff;
-			font-size: 1.1rem;
+			font-size: 1rem;
 			font-family: IRANSans;
 			font-weight: 300;
-			text-align: right;
 			direction: rtl;
 			padding-right: 2.5rem;
+			padding-left: 1.2rem;
+			margin-bottom: 0px;
+			padding-bottom: 1rem;
+			width:100%;
+			text-align: justify;
+			word-wrap: break-word;
+			white-space: pre-line;
 		}
 		div.bx
 		{
-			height: 400px;
 			width: 100%;
 		}
 		div.tafsirBox
