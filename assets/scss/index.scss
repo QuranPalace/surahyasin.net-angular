@@ -77,7 +77,7 @@ body
 			color:#ffffff;
 			font-size: 2rem;
 			margin-top: 0px;
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 			padding-top: 1.4rem;
 			font-family: IRANSans;
 			font-weight: 400;
@@ -95,16 +95,33 @@ body
 			direction: rtl;
 			padding-right: 2.5rem;
 			padding-left: 1.2rem;
-			margin-bottom: 0px;
-			padding-bottom: 1rem;
+			margin-top: 0rem;
 			width:100%;
 			text-align: justify;
 			word-wrap: break-word;
 			white-space: pre-line;
 		}
+		p.author
+		{
+			font-size: 0.8rem;
+			font-weight: 300;
+			color:#ffffff;
+			text-align: left;
+			direction: rtl;
+			padding-right: 2.5rem;
+			padding-left: 1.2rem;
+			margin:0px;
+			font-family: IRANSans;
+			padding-bottom: 0.6rem;
+			.position
+			{
+				font-size: 0.6rem;
+			}
+		}
 		div.bx
 		{
 			width: 100%;
+			padding-bottom: 2rem;
 		}
 		div.tafsirBox
 		{
