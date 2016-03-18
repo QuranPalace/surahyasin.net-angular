@@ -70,6 +70,10 @@ body
 					color: $mainTextColor;
 					cursor: pointer;
 				}
+				.icon:focus
+				{
+					outline: none;
+				}
 			}
 		}
 	}
