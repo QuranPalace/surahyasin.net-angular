@@ -13,8 +13,12 @@
     "tests"
   ],
   "dependencies": {
+    "angular-material": "master",
     "angular-route": "~1.4.6",
     "foundation": "~5.5.3",
-    "foundation-sites": "~6.0.1"
+    "foundation-sites": "~6.0.1",
+    "material-design-icons": "~2.0.0",
+    "Ionicons": "ionicons#~2.0.1",
+    "angular-material-icons": "~0.6.0"
   }
 }

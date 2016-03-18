@@ -1,6 +1,6 @@
 @import "fontello";
 @import "fonts";
-@import "foundation.scss";
+@import "../../bower_components/Ionicons/scss/ionicons.scss";
 $mainTextColor: #463629;
 $seconderyTextColor: #000000;
 $seconderyColor1: #195171;
@@ -8,8 +8,12 @@ $seconderyColor2: #20A1CC;
 $seconderyColor3: #9D2727;
 $seconderyColor4: #0C666F;
 $seconderyColor5: #364449;
-$backgroundColor: #F8ECC2;
+$backgroundColor: #F1ECD8;
 $numberColor: #2F8877;
+*
+{
+	font-family: IRANSans;
+}
 body
 {
 	margin: 0px;
@@ -24,6 +28,11 @@ body
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 }
+.logo
+{
+	width: 6rem;
+
+}
 .marginless
 {
 	margin-left: 0px !important;
@@ -32,117 +41,88 @@ body
 #mainPlate
 {
 	height:100vh;
-	.listPlate,.detailPlate
-	{
-		height:100vh;
-		overflow-y: auto;
-	}
-	.listPlate
+	.itemPlate
 	{
 		background-color: $backgroundColor;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		p
+		.versePlate
 		{
-			direction: rtl;
-			text-align: right;
-		}
-		p.aye
-		{
-			font-size: 1.6rem;
-			font-family: meQuran;
-			color: $mainTextColor;
-			margin-bottom: 0px;
-			word-spacing: 0.6rem;
-			span.number
+			.verseBox
 			{
-				font-family: fontello;
-				font-size: 1.4rem;
-				padding-right: 0.4rem;
-				margin-top: 0.2rem;
-				color: $numberColor;
+				.verse
+				{
+					text-align: center;
+					font-size: 2.3rem;
+					font-family: meQuran;
+					word-spacing: 0.6rem;
+					letter-spacing: -1px;
+					color: $mainTextColor;
+
+				}
 			}
-		}
-		p.translate
-		{
-			font-size: 0.8rem;
-			font-family: IRANSans;
-			color: $seconderyTextColor;
+			.controlVerseButton
+			{
+				padding-left: 1rem;
+				padding-right: 1rem;
+				.icon
+				{
+					font-family: Ionicons;
+					font-size: 2.3rem;
+					color: $mainTextColor;
+					cursor: pointer;
+				}
+			}
 		}
 	}
 	.detailPlate
 	{
-		h2.title
+		background-color: $seconderyColor1;
+		padding:0px;
+	}
+	.detailTabs
+	{
+		.md-tab
 		{
-			color:#ffffff;
-			font-size: 2rem;
-			margin-top: 0px;
-			margin-bottom: 1rem;
-			padding-top: 1.4rem;
-			font-family: IRANSans;
-			font-weight: 400;
-			text-align: right;
-			direction: rtl;
-			padding-right: 1.4rem;
-			padding-left: 1.4rem;
-		}
-		p.text
-		{
-			color:#ffffff;
-			font-size: 1rem;
-			font-family: IRANSans;
-			font-weight: 300;
-			direction: rtl;
-			padding-right: 2.5rem;
-			padding-left: 1.2rem;
-			margin-top: 0rem;
-			width:100%;
-			text-align: justify;
-			word-wrap: break-word;
-			white-space: pre-line;
-		}
-		p.author
-		{
-			font-size: 0.8rem;
-			font-weight: 300;
-			color:#ffffff;
-			text-align: left;
-			direction: rtl;
-			padding-right: 2.5rem;
-			padding-left: 1.2rem;
-			margin:0px;
-			font-family: IRANSans;
-			padding-bottom: 0.6rem;
-			.position
+			span
 			{
-				font-size: 0.6rem;
+				color: $seconderyColor1 !important;	
 			}
 		}
-		div.bx
+		.md-tab.md-active
 		{
-			width: 100%;
-			padding-bottom: 2rem;
+			span
+			{
+				color: #ffffff !important;	
+			}
 		}
-		div.tafsirBox
+		md-pagination-wrapper
 		{
-			background-color: $seconderyColor1;
+			right: 0px;
+			left: auto;
+			right: auto;
+			position: relative;
+			margin: 0 auto;
+			md-tab-item
+			{
+				float: right;
+			}
 		}
-		div.sarfBox
+		md-ink-bar
 		{
-			background-color: $seconderyColor2;
+
 		}
-		div.hadisBox
+		md-tab-content.md-right
 		{
-			background-color: $seconderyColor4;
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+			-webkit-animation: 1s md-tab-content-hide;
+			animation: 1s md-tab-content-hide;
 		}
-		div.moreDetailBox
+		md-tab-content.md-left
 		{
-			background-color: $seconderyColor5;
-		}
-		div.extraDetailBox
-		{
-			background-color: $seconderyColor3;
+			-webkit-transform: translateX(100%);
+			transform: translateX(100%);
+			-webkit-animation: 1s md-tab-content-hide;
+			animation: 1s md-tab-content-hide;
 		}
 	}
-
 }
