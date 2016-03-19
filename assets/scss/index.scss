@@ -56,7 +56,21 @@ body
 					word-spacing: 0.6rem;
 					letter-spacing: -1px;
 					color: $mainTextColor;
-
+					opacity: 1;
+					-webkit-transition:0.3s linear all;
+		         -moz-transition:0.3s linear all;
+		          -ms-transition:0.3s linear all;
+		           -o-transition:0.3s linear all;
+		              transition:0.3s linear all;
+				}
+				.verse.hd
+				{
+					opacity: 0;
+					-webkit-transition:0.3s linear all;
+		         -moz-transition:0.3s linear all;
+		          -ms-transition:0.3s linear all;
+		           -o-transition:0.3s linear all;
+		              transition:0.3s linear all;
 				}
 			}
 			.controlVerseButton
@@ -129,6 +143,62 @@ body
 			transform: translateX(100%);
 			-webkit-animation: 1s md-tab-content-hide;
 			animation: 1s md-tab-content-hide;
+		}
+	}
+	.noValue
+	{
+		font-size: 2.3rem;
+		color: #ffffff;
+		text-align: center;
+		margin: 0px;
+		margin-top: 9rem;
+		direction: rtl;
+		font-weight: 300;
+
+	}
+	.textBox
+	{
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		padding-right: 2rem;
+		padding-left: 2rem;
+		p,h2,span
+		{
+			direction: rtl;
+			text-align: right;
+			color: #ffffff;
+			white-space: pre-wrap;
+		}
+		.text
+		{
+			font-size: 1.2rem;
+			line-height: 2rem;
+			font-weight: 400;
+		}
+	}
+	.hadisBox
+	{
+		.from
+		{
+			text-align: left;
+			span
+			{
+				font-size: 0.8rem;
+				font-weight: 300;
+			}
+		}
+		.translate
+		{
+			font-size: 1rem;
+			font-weight: 400;
+			padding-right: 2rem;
+		}
+	}
+	.translateBox
+	{
+		.text
+		{
+			text-align: center;
 		}
 	}
 }

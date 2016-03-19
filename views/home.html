@@ -23,35 +23,61 @@
 		</div>
 	</div>
 	<div flex="65"  layout="row">
-		<md-content class="md-padding detailPlate" flex="100">
-	    <md-tabs class="md-primary detailTabs" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
+		<md-content class="md-padding detailPlate" flex="100" layout="column">
+	    <md-tabs class="md-primary detailTabs" md-selected="data.selectedIndex" md-align-tabs="center" flex="100">
 	      <md-tab id="tab1">
 	        <md-tab-label class='tabTitle'>ترجمه</md-tab-label>
-	        <md-tab-body>
-	          View for Item #1 <br/>
-	          data.selectedIndex = 0;
+	        <md-tab-body layout="row" flex="100">
+	          <div layout="column" flex="100" ng-show="translates[0][currentVerseIdx-1] != undefined">
+	          	<div class="translateBox textBox">
+	          		<h2 class="text">{{translates[0][currentVerseIdx-1]}}</h2>
+	          	</div>
+	          </div>
+	          <div layout="column" flex="100" layout-align="center center" ng-show="translates[0][currentVerseIdx-1] == undefined">
+	          	<h1 class="noValue">ترجمه ای در دسترس نیست.</h1>
+	          </div>
 	        </md-tab-body>
 	      </md-tab>
 	      
 	      <md-tab id="tab2">
 	        <md-tab-label class='tabTitle'>اعراب</md-tab-label>
-	        <md-tab-body>
-	          View for Item #3 <br/>
-	          data.selectedIndex = 2;
+	        <md-tab-body layout="row" flex="100">
+	          <div layout="column" flex="100" ng-show="erab[currentVerseIdx-1].length > 0">
+	          	<div class="erabBox textBox" ng-repeat="itm in erab[currentVerseIdx-1]">
+	          		<h2 class="text">{{itm.text}}</h2>
+	          	</div>
+	          </div>
+	          <div layout="column" flex="100" layout-align="center center" ng-show="erab[currentVerseIdx-1].length == 0 || erab[currentVerseIdx-1] == undefined">
+	          	<h1 class="noValue">اعرابی در دسترس نیست.</h1>
+	          </div>
 	        </md-tab-body>
 	      </md-tab>
 	      <md-tab id="tab3">
 	        <md-tab-label class='tabTitle'>احادیث</md-tab-label>
-	        <md-tab-body>
-	          View for Item #3 <br/>
-	          data.selectedIndex = 2;
+	        <md-tab-body layout="row" flex="100">
+	          <div layout="column" flex="100" ng-show="hadis[currentVerseIdx-1].length > 0">
+	          	<div class="hadisBox textBox" ng-repeat="hds in hadis[currentVerseIdx-1]">
+	          		<h2 class="text">{{hds.text}}</h2>
+	          		<p class="translate">{{hds.translate}}</p>
+	          		<p class="from"><span>{{hds.from}}</span></p>
+	          	</div>
+	          </div>
+	          <div layout="column" flex="100" layout-align="center center" ng-show="hadis[currentVerseIdx-1].length == 0 || hadis[currentVerseIdx-1] == undefined">
+	          	<h1 class="noValue">حدیثی در دسترس نیست.</h1>
+	          </div>
 	        </md-tab-body>
 	      </md-tab>
 	      <md-tab id="tab4">
 	        <md-tab-label class='tabTitle'>تفاسیر</md-tab-label>
-	        <md-tab-body>
-	          View for Item #3 <br/>
-	          data.selectedIndex = 2;
+	        <md-tab-body layout="row" flex="100">
+	          <div layout="column" flex="100" ng-show="tafsir[currentVerseIdx-1].length > 0">
+	          	<div class="translateBox textBox">
+	          		<h2 class="text">{{translates[0][currentVerseIdx-1]}}</h2>
+	          	</div>
+	          </div>
+	          <div layout="column" flex="100" layout-align="center center" ng-show="tafsir[currentVerseIdx-1].length == 0 || tafsir[currentVerseIdx-1] == undefined">
+	          	<h1 class="noValue">تفسیری در دسترس نیست.</h1>
+	          </div>
 	        </md-tab-body>
 	      </md-tab>
 	    </md-tabs>
