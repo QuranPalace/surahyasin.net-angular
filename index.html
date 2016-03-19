@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 	<link rel="stylesheet" href="/styles/index.css"/>
 </head>
-<body ng-controller="mainCtrl">
+<body ng-controller="mainCtrl" ng-keydown="onKeydown(item, $event)">
 	
 	<div id="ngView" ng-view class="main-wrapper">
 	</div>

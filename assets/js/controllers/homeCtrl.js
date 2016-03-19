@@ -1,5 +1,7 @@
 yaasin.controller('homeCtrl', function homeCtrl($scope)
 {
+	
+
   $scope.selectedTranslate = 0;
   $scope.currentVerseIdx = 1;
   $scope.controlVerse = function(mtr)
@@ -16,4 +18,13 @@ yaasin.controller('homeCtrl', function homeCtrl($scope)
   	}
 
   }
+
+  $scope.$on('leftButtonPressed', function(e) {  
+  	$scope.controlVerse(-1);
+  });
+
+  $scope.$on('rightButtonPressed', function(e) {  
+  	$scope.controlVerse(1);
+  });
+  
 });
