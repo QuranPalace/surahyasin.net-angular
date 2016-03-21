@@ -1,0 +1,29 @@
+<div id="siyaghPlate" layout="column">
+	<div class="headerPlate" flex="10" layout="column">
+		<div flex="100" class="siyaghPlate" layout-align="center center" layout="row">
+			<div class="controlSiyaghButton">
+				<span class="icon" ng-click="controlSiyagh(-1)"></span>
+			</div>
+			<div class="siyaghBox">
+				<h2 class="siyagh">سیاق {{(currentSiyagh+1) | persianiser}}</h2>
+			</div>
+			<div class="controlSiyaghButton">
+				<span class="icon" ng-click="controlSiyagh(+1)"></span>
+			</div>
+		</div>
+	</div>
+	<div class="bottomPlate" flex="90" layout="row">
+		<div class="detailPlate" flex="50" layout="column" layout-align="center center">
+			<p class="translateBox"><span class="translate" ng-repeat="idx in siyagh[currentSiyagh]">{{translates[0][idx]}}</span>
+			</p>
+		</div>
+		<div class="listPlate" flex="50" layout="column" layout-align="center center">
+			<div class="verseBox">
+				<p class="verse" ng-repeat="idx in siyagh[currentSiyagh]">
+					{{soore.items[idx]}}
+				</p>
+			</div>
+		</div>
+	</div>
+	
+</div>

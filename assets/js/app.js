@@ -8,6 +8,10 @@ var yaasin = angular.module('yaasin', ['ngMaterial', 'ngRoute'])
                 templateUrl: '../views/home.html',
                 controller: 'homeCtrl'
             })
+            .when('/siyagh',{
+                templateUrl: '../views/siyagh.html',
+                controller: 'siyaghCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });

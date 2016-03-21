@@ -3,7 +3,7 @@ import json
 wb = load_workbook(filename='files/hadis.xlsx', read_only=True)
 ws = wb['Sheet1'] # ws is now an IterableWorksheet
 lst = {}
-counter = 0
+counter = 1
 for row in ws.rows:
 	lst[str(counter)] = []
 	for idx in range(0,len(row),3):
