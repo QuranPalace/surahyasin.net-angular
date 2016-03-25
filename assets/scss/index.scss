@@ -41,51 +41,62 @@ body
 #siyaghPlate
 {
 	height: 100vh;
-	.headerPlate
+	.siyaghPlate
 	{
-		background-color: $seconderyColor2;
-		.siyaghPlate
+		.siyaghBox
 		{
-			.siyaghBox
+			.siyagh
 			{
-				.siyagh
-				{
-					text-align: center;
-					font-size: 1.8rem;
-					font-weight: 300;
-					color: #ffffff;
-					opacity: 1;
-					-webkit-transition:0.3s linear all;
-		         -moz-transition:0.3s linear all;
-		          -ms-transition:0.3s linear all;
-		           -o-transition:0.3s linear all;
-		              transition:0.3s linear all;
-				}
-				.siyagh.hd
-				{
-					opacity: 0;
-					-webkit-transition:0.3s linear all;
-		         -moz-transition:0.3s linear all;
-		          -ms-transition:0.3s linear all;
-		           -o-transition:0.3s linear all;
-		              transition:0.3s linear all;
-				}
+				text-align: center;
+				font-size: 1.8rem;
+				font-weight: 300;
+				color: #ffffff;
+				opacity: 1;
+				-webkit-transition:0.3s linear all;
+	         -moz-transition:0.3s linear all;
+	          -ms-transition:0.3s linear all;
+	           -o-transition:0.3s linear all;
+	              transition:0.3s linear all;
 			}
-			.controlSiyaghButton
+			.siyagh.hd
 			{
-				padding-left: 1rem;
-				padding-right: 1rem;
-				.icon
-				{
-					font-family: Ionicons;
-					font-size: 2.3rem;
-					color: #ffffff;
-					cursor: pointer;
-				}
-				.icon:focus
-				{
-					outline: none;
-				}
+				opacity: 0;
+				-webkit-transition:0.3s linear all;
+	         -moz-transition:0.3s linear all;
+	          -ms-transition:0.3s linear all;
+	           -o-transition:0.3s linear all;
+	              transition:0.3s linear all;
+			}
+		}
+		.controlSiyaghButton
+		{
+			padding-left: 1rem;
+			padding-right: 1rem;
+			.icon
+			{
+				font-family: Ionicons;
+				font-size: 2.3rem;
+				color: #ffffff;
+				cursor: pointer;
+			}
+			.icon:focus
+			{
+				outline: none;
+			}
+		}
+	}
+	.siyaghPlate.left
+	{
+		background-color: $seconderyColor1;
+	}
+	.siyaghPlate.right
+	{
+		background-color: $backgroundColor;
+		.controlSiyaghButton
+		{
+			.icon
+			{
+				color: $mainTextColor;
 			}
 		}
 	}
@@ -105,12 +116,20 @@ body
 				word-spacing: 0.6rem;
 				letter-spacing: -1px;
 				color: $mainTextColor;
+				direction: rtl;
+				.number
+				{
+					font-family: fontello;
+					color: $numberColor;
+					font-size: 1.8rem;
+					padding-right: 0.7rem;
+				}
 			}	
 		}
 	}
 	.detailPlate
 	{
-		background-color: $seconderyColor1;	
+		background-color: $seconderyColor1;
 		padding: 2rem;
 		overflow-y: auto;
 		.translateBox
