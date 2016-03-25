@@ -71,8 +71,9 @@
 	        <md-tab-label class='tabTitle'>تفاسیر</md-tab-label>
 	        <md-tab-body layout="row" flex="100">
 	          <div layout="column" flex="100" ng-show="tafsir[currentVerseIdx-1].length > 0">
-	          	<div class="translateBox textBox">
-	          		<h2 class="text">{{translates[0][currentVerseIdx-1]}}</h2>
+	          	<div class="hadisBox textBox" ng-repeat="tfsr in tafsir[currentVerseIdx-1]">
+	          		<h2 class="text" ng-show="tfsr['text'].length > 0">{{tfsr.title}}</h2>
+	          		<p class="translate" ng-repeat="txt in tfsr['text']">{{txt}}</p>
 	          	</div>
 	          </div>
 	          <div layout="column" flex="100" layout-align="center center" ng-show="tafsir[currentVerseIdx-1].length == 0 || tafsir[currentVerseIdx-1] == undefined">
