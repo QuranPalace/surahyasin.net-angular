@@ -7,7 +7,22 @@
 	<link rel="stylesheet" href="/styles/index.css"/>
 </head>
 <body ng-controller="mainCtrl" ng-keydown="onKeydown(item, $event)">
-	
+	<md-fab-toolbar id="fabToolbar" md-open="fabToolbarStatus"
+                  md-direction="left">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab md-primary menuButton">
+        <md-icon md-svg-src="/bower_components/material-design-icons/navigation/svg/production/ic_menu_48px.svg"></md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button ng-href="/#/">آیه</md-button>
+        <md-button ng-href="/#/siyagh">سیاق</md-button>
+        <md-button ng-href="/#/">سوره</md-button>
+
+      </md-fab-actions>
+    </md-toolbar>
+  </md-fab-toolbar>
 	<div id="ngView" ng-view class="main-wrapper">
 	</div>
 

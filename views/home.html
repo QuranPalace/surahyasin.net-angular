@@ -5,7 +5,9 @@
         <label>شماره آیه</label>
         <md-select ng-model="currentVerseIdx">
           <md-option ng-repeat="vrs in soore.items" value="{{$index+1}}">
-            {{$index+1 |persianiser }}
+            <span>{{$index |persianiser }}</span>
+
+            
           </md-option>
         </md-select>
       </md-input-container>
@@ -28,12 +30,15 @@
 	      <md-tab id="tab1">
 	        <md-tab-label class='tabTitle'>ترجمه</md-tab-label>
 	        <md-tab-body layout="row" flex="100">
-	          <div layout="column" flex="100" ng-show="translates[0][currentVerseIdx-1] != undefined">
-	          	<div class="translateBox textBox">
-	          		<h2 class="text">{{translates[0][currentVerseIdx-1]}}</h2>
+	          <div layout="column" flex="100" ng-show="translates[currentVerseIdx-1] != undefined">
+	          	<div class=" textBox">
+	          		<div ng-repeat="itm in translates[currentVerseIdx-1]"> 
+		          		<h2 class="title">{{itm.label}}</h2>
+		          		<h2 class="text">{{itm.value}}</h2>
+	          		</div>
 	          	</div>
 	          </div>
-	          <div layout="column" flex="100" layout-align="center center" ng-show="translates[0][currentVerseIdx-1] == undefined">
+	          <div layout="column" flex="100" layout-align="center center" ng-show="translates[currentVerseIdx-1] == undefined">
 	          	<h1 class="noValue">ترجمه ای در دسترس نیست.</h1>
 	          </div>
 	        </md-tab-body>

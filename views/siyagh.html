@@ -8,13 +8,20 @@
 			</div>
 		</div>
 		
-		<div class="detailPlate" flex="45" layout="column" layout-align="center center">
-			<p class="translateBox"><span class="translate" ng-repeat="idx in siyagh[currentSiyagh]">{{translates[0][idx]}}</span>
+		<div class="detailPlate" flex="45" layout="column" layout-align="start end">
+			<h2 class="title">{{translates[0][0].label}}</h2>
+			<p class="translateBox"><span class="translate" ng-repeat="idx in siyagh[currentSiyagh]">{{translates[idx][0].value}}</span>
+			</p>
+			<h2 class="title">{{translates[0][1].label}}</h2>
+			<p class="translateBox"><span class="translate" ng-repeat="idx in siyagh[currentSiyagh]">{{translates[idx][1].value}}</span>
+			</p>
+			<h2 class="title">{{translates[0][2].label}}</h2>
+			<p class="translateBox"><span class="translate" ng-repeat="idx in siyagh[currentSiyagh]">{{translates[idx][2].value}}</span>
 			</p>
 		</div>
 		
-		<div class="listPlate" flex="45" layout="column" layout-align="center center">
-			<div class="verseBox">
+		<div class="listPlate" flex="45" layout="column" layout-align="start end">
+			<div class="verseBox" style="min-height: 100vh" layout="column">
 				<p class="verse" ng-repeat="idx in siyagh[currentSiyagh]">
 					{{soore.items[idx]}}<span class="number">{{numbers[idx]}}</span>
 				</p>

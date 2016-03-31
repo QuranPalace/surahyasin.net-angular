@@ -141,6 +141,12 @@ body
 			white-space: pre-wrap;
 			font-size: 1.3rem;
 		}
+		.title
+		{
+			width: 100%;
+			color: #ffffff;
+			text-align: right !important;
+		}
 	}
 }
 #mainPlate
@@ -286,6 +292,10 @@ body
 			line-height: 2rem;
 			font-weight: 400;
 		}
+		.title
+		{
+			font-style: 1.4rem;
+		}
 	}
 	.textBox.hd
 	{
@@ -314,12 +324,16 @@ body
 			padding-right: 2rem;
 		}
 	}
-	.translateBox
+	
+}
+#fabToolbar
+{
+	position: fixed !important;
+	right: 0rem !important;
+	top: 0px !important;
+	width: 100% !important;
+	.menuButton
 	{
-		.text
-		{
-			text-align: center;
-		}
+		background-color: $mainTextColor;
 	}
 }
-
