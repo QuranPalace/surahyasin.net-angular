@@ -370,8 +370,9 @@ body
 		}
 		&.data
 		{
-			box-shadow: 0px 3px 8px 0px #a0a0a0;
-			background-color: $ultraLiteGray;
+			box-shadow: 0px 3px 8px 0px $brownColor;
+			background-color: $backgroundColor;
+			color: $brownColor !important;
 			width:100vw;
 			height:100vh;
 			padding:0.6rem;
@@ -387,6 +388,21 @@ body
 				text-align: right;
 				direction: rtl;
 				font-size: 1.2rem;
+			}
+			.hadisBox
+			{
+				padding-bottom: 3rem;
+				.text
+				{
+					text-align: right;
+					direction: rtl;
+					line-height: 2.4rem;
+				}
+				.translate
+				{
+					text-align: right;
+					direction: rtl;
+				}
 			}
 		}
 	}
