@@ -11,6 +11,7 @@ $seconderyColor5: #364449;
 $backgroundColor: #F1ECD8;
 $numberColor: #2F8877;
 $ultraLiteGray: #EBEBEB;
+$ultraDarkGray: #505050;
 *
 {
 	font-family: IRANSans;
@@ -360,6 +361,20 @@ body
 			background-color: $ultraLiteGray;
 			width:100vw;
 			height:100vh;
+			padding:0.6rem;
+			overflow-y:auto;
+			.title
+			{
+				text-align: center;
+				color: $ultraDarkGray;
+				font-weight: 400;
+			}
+			.text
+			{
+				text-align: right;
+				direction: rtl;
+				font-size: 1.2rem;
+			}
 		}
 	}
 }
