@@ -308,26 +308,27 @@ body
          -o-transition:0.3s linear all;
             transition:0.3s linear all;
 	}
-	.hadisBox
+}
+
+.hadisBox
+{
+	.from
 	{
-		.from
+		text-align: left;
+		span
 		{
-			text-align: left;
-			span
-			{
-				font-size: 0.8rem;
-				font-weight: 300;
-			}
-		}
-		.translate
-		{
-			font-size: 1rem;
-			font-weight: 400;
-			padding-right: 2rem;
+			font-size: 0.8rem;
+			font-weight: 300;
 		}
 	}
-	
+	.translate
+	{
+		font-size: 1rem;
+		font-weight: 400;
+		padding-right: 2rem;
+	}
 }
+
 #fabToolbar
 {
 	position: fixed !important;
@@ -362,7 +363,7 @@ body
 			width:100vw;
 			height:100vh;
 			padding:0.6rem;
-			overflow-y:auto;
+			// overflow-y:auto;
 			.title
 			{
 				text-align: center;
