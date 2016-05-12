@@ -12,6 +12,7 @@ $backgroundColor: #F1ECD8;
 $numberColor: #2F8877;
 $ultraLiteGray: #EBEBEB;
 $ultraDarkGray: #505050;
+$brownColor: #635E4A;
 *
 {
 	font-family: IRANSans;
@@ -347,13 +348,24 @@ body
 		border-radius: 10px;
 		&.main
 		{
-			background-color: $seconderyColor1;
+			background-color: $backgroundColor;
 			width:100vw;
 			height:100vh;
-			a
+			box-shadow: 0px 3px 8px 0px $brownColor;
+			a, h2
 			{
-				color:#ffffff;
+				color: $brownColor;
 				text-decoration: none;
+			}
+			.link
+			{
+				cursor: pointer;
+			}
+			.logo
+			{
+				width: 50%;
+				display: block;
+				margin: 0 auto !important;
 			}
 		}
 		&.data
@@ -378,4 +390,10 @@ body
 			}
 		}
 	}
+}
+.fixedFabButton
+{
+	position: fixed;
+	bottom: 1.5rem;
+	left: 1.5rem;
 }

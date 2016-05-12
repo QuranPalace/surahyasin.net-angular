@@ -331,6 +331,26 @@ yaasin.directive('impress', ['$compile',
 
                 };
 
+                $scope.$on('goIdentityPage', function () {
+                    $scope.currentSlide = 1;
+                    $scope.goToSlide();
+                });
+
+                $scope.$on('goHome', function () {
+                    $scope.currentSlide = 0;
+                    $scope.goToSlide();
+                });
+
+                $scope.$on('goHadisPage', function () {
+                    $scope.currentSlide = 2;
+                    $scope.goToSlide();
+                });
+
+                $scope.$on('goStructurePage', function () {
+                    $scope.currentSlide = 3;
+                    $scope.goToSlide();
+                });
+
                 $scope.$on('goToSlide', function () {
                     $scope.goToSlide();
                 });

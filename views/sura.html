@@ -1,15 +1,18 @@
 <div id="impresshook">
     <div class="impress">
         <div class="step slide main">
-          <div layout="row" flex="100" style="height:100%;" layout-align="space-around center">
-            <div>
-              <h2><a href="/#/sura#identity">شناسنامه</a></h2>
-            </div>
-            <div>
-              <h2><a href="#hadis">احادیث</a></h2>
-            </div>
-            <div>
-              <h2><a href="#structure">ساختار</a></h2>
+          <div layout="column"  style="height:100%;" >
+            <img class="logo" src="/static/image/logo.svg">
+            <div layout="row" flex="100" layout-align="space-around center">
+              <div>
+                <h2 class="link" ng-click="$emit('goIdentityPage')">شناسنامه</h2>
+              </div>
+              <div>
+                <h2 class="link" ng-click="$emit('goHadisPage')">احادیث</h2>
+              </div>
+              <div>
+                <h2 class="link" ng-click="$emit('goStructurePage')">ساختار</h2>
+              </div>
             </div>
           </div>
         </div>
@@ -76,5 +79,9 @@
         <!-- <div class="step " data-y="1500">
             <button ng-click="$emit('nextSlide')">Start Over</button>
         </div> -->
+
     </div>
+    <md-button class="md-fab md-primary fixedFabButton" aria-label="Home" ng-click="$emit('goHome')">
+      <md-icon md-svg-src="/bower_components/material-design-icons/action/svg/production/ic_home_48px.svg"></md-icon>
+    </md-button>
 </div>
