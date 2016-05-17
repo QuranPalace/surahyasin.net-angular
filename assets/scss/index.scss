@@ -419,3 +419,32 @@ body
 	bottom: 1.5rem;
 	left: 1.5rem;
 }
+#suraPlate
+{
+	.listPlate
+	{
+		padding: 2rem;
+		overflow-y: auto;
+		.verseBox
+		{
+			margin: 0px;
+			.verse
+			{		
+				text-align: right;
+				font-size: 1.5rem;
+				font-family: meQuran;
+				word-spacing: 0.6rem;
+				letter-spacing: -1px;
+				color: $mainTextColor;
+				direction: rtl;
+				.number
+				{
+					font-family: fontello;
+					color: $numberColor;
+					font-size: 1.8rem;
+					padding-right: 0.7rem;
+				}
+			}	
+		}
+	}
+}

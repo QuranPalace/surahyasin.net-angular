@@ -132,7 +132,7 @@ yaasin.directive('impress', ['$compile',
         var defaults = {
             width: 950,
             height: 950,
-            maxScale: 20,
+            maxScale: 400,
             minScale: 0,
             perspective: 1000,
             transitionDuration: 1000
@@ -285,6 +285,8 @@ yaasin.directive('impress', ['$compile',
                         }
                     });
                 });
+
+                
 
                 $scope.goToSlide = function (index) {
                     window.scrollTo(0, 0);

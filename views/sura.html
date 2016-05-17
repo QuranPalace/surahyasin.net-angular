@@ -1,6 +1,13 @@
 <div id="impresshook">
-    <div class="impress">
-        <div class="step slide main">
+    <div id="suraPlate" class="impress">
+        <div class="step slide main"
+          data-x="1000"
+          data-y="3000"
+          data-z="4000"
+          data-rotate-x="30"
+          data-rotate-y="100"
+          data-rotate-z="40"
+          transitionDuration="4000">
           <div layout="column"  style="height:100%;" >
             <img class="logo" src="/static/image/logo.svg">
             <div layout="row" flex="100" layout-align="space-around center">
@@ -22,7 +29,7 @@
         data-z="400"
         data-rotate-x="30"
         data-rotate-y="100"
-        data-rotate-z="10"
+        data-rotate-z="200"
         transitionDuration="4000">
           <h1 class="title">شناسنامه</h1>
           <p class="text">شیراز یکی از شهرهای بزرگ ایران و مرکز استان اين سوره‌، مشهور به سوره "يس‌" است‌؛ (خوانده می شود: یاسین)، زيرا با كلمه "يس‌" كه يكي از حروف رمزي و مقطعه قرآن است‌، آغاز مي‌شود.
@@ -68,18 +75,69 @@
           <div layout="column"  style="height:100%;" >
             <h2 class="title">ساختار سوره</h2>
             <div layout="row" flex="100" layout-align="space-around center">
-              <div>
-                <h2 class="link">ساختار ۱</h2>
-              </div>
-              <div>
-                <h2 class="link">ساختار ۲</h2>
-              </div>
-              <div>
-                <h2 class="link">ساختار ۳</h2>
+              <div ng-repeat="structure in structures">
+                <h2 class="link">{{structure.author}}</h2>
               </div>
             </div>
           </div>
           
+        </div>
+
+        <div ng-repeat="structure in structures">
+          <div class="step slide" 
+          data-x="20000"
+          data-y="8500"
+          data-z="25000"
+          scale="200"
+          data-rotate-x="0"
+          data-rotate-y="0"
+          data-rotate-z="0"
+          transitionDuration="4000">
+            
+          </div>
+          <div ng-repeat="stp in structure.structure">
+            <div class="step slide data"
+            data-x="22000"
+            data-y="{{getHeightOfListCell(2000,1000,$index)}}"
+            data-z="2000"
+            scale="4"
+            data-rotate-x="0"
+            data-rotate-y="0"
+            data-rotate-z="0"
+            transitionDuration="4000"
+            >
+              <div style="height:100%;width:100%;overflow-y: auto;">
+                <div class="listPlate"layout="column" layout-align="start center">
+                  <div class="verseBox" layout="column">
+                    <p class="verse" ng-repeat="idx in range(stp.start,stp.end) track by $index">
+                      {{soore.items[idx]}}<span class="number">{{numbers[idx]}}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step slide data"
+            data-x="18000"
+            data-y="{{getHeightOfListCell(2000,1000,$index)}}"
+            data-z="2000"
+            scale="4"
+            data-rotate-x="0"
+            data-rotate-y="0"
+            data-rotate-z="0"
+            transitionDuration="4000"
+            >
+              <div layout="column"  style="height:100%;" >
+                <div layout="row" flex="100" layout-align="space-around center">
+                  <div ng-repeat="structure in structures">
+                    {{stp.value}}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
         
         <!-- <div class="step slide" 

@@ -11,6 +11,15 @@ yaasin.controller('mainCtrl', function mainCtrl($scope)
     RIGHTARROW : 39,
     DOWNARROW : 40,
   };
+  $scope.range = function(start,end)
+  {
+    var lst = [];
+    for(var i = start;i<=end;i++)
+    {
+      lst.push(i);
+    }
+    return lst;
+  }
   $scope.numbers = ['',
                     '','','','','','','','','','',
                     '','','','','','','','','','',
@@ -35,4 +44,10 @@ yaasin.controller('mainCtrl', function mainCtrl($scope)
     }
 
   };
+
+  $scope.getHeightOfListCell = function(start,cellHeight,idx)
+  {
+    return start + idx*cellHeight;
+  }
+
 });
